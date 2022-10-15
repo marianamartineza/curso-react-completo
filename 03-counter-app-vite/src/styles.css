@@ -1,0 +1,9 @@
+ /* estilos globales */
+
+html, body {
+    background-color: darkslategray;
+    color: white;
+    font-family : Helvetica, Arial, sans-serif;
+    font-size : 1.3rem;
+    padding : 70px;
+}
