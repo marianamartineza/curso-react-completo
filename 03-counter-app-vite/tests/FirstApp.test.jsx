@@ -7,8 +7,29 @@ describe('Pruebas en <FirstApp?>', () => {
 
         const title = 'Hola, soy Goku';
         
-        render(<FirstApp title={title} subTitle={12}/>)
+        const {container}=render(<FirstApp title={title} subTitle={12}/>)
+
+        expect(container).toMatchSnapshot();
 
      });
+    
+     test('debe de contener el titulo en un h1', () => { 
+
+        const title = 'Hola, soy Goku';
+
+        const {container, getByText} = render( <FirstApp title={title} subTitle={12}/> )
+
+        expect(getByText(title)).toBeTruthy();
+
+        const h1 = container.querySelector('h1');
+
+        console.log(h1.innerHTML);
+
+        expect(h1.innerHTML).toBe(title);
+
+        expect(h1.innerHTML).toContain(title);
+
+
+      })          
 
  });
