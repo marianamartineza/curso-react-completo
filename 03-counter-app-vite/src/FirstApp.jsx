@@ -27,7 +27,7 @@ export const FirstApp = ({title,subTitle}) => {
     return (
     //<Fragment>
     <>
-        <div data-testid="test-title">{title}</div>
+        <h1 data-testid="test-title">{title}</h1>
         {/* <h1>{getSaludo('Mariana')}</h1> */}
         {/* <h1>Hola Mundo</h1> */}
         {/* <code>{JSON.stringify(newMessage)}</code> */}
