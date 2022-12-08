@@ -27,11 +27,13 @@ export const FirstApp = ({title,subTitle}) => {
     return (
     //<Fragment>
     <>
-        <h1>{title}</h1>
+        <div data-testid="test-title">{title}</div>
         {/* <h1>{getSaludo('Mariana')}</h1> */}
         {/* <h1>Hola Mundo</h1> */}
         {/* <code>{JSON.stringify(newMessage)}</code> */}
-        <p>{subTitle + 1}</p>
+        {/* <p>{subTitle + 1}</p> */}
+        <p>{subTitle}</p>
+        <p>{subTitle}</p>
         <p>Mariana Martinez</p>
     </>
     //</Fragment>
@@ -40,7 +42,7 @@ export const FirstApp = ({title,subTitle}) => {
 
 FirstApp.propTypes = {
     title: PropTypes.string.isRequired,
-    subTitle: PropTypes.number.isRequired
+    // subTitle: PropTypes.number.isRequired
 }
 
 // snnipet rafc 
