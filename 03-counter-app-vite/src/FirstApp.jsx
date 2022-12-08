@@ -32,6 +32,7 @@ export const FirstApp = ({title,subTitle}) => {
         {/* <h1>Hola Mundo</h1> */}
         {/* <code>{JSON.stringify(newMessage)}</code> */}
         <p>{subTitle + 1}</p>
+        <p>Mariana Martinez</p>
     </>
     //</Fragment>
     );
