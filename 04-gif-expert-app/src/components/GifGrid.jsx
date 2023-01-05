@@ -1,20 +1,4 @@
-const getGifs = async(category) => {
-
-    const url = `https://api.giphy.com/v1/gifs/search?api_key=kOIh6O5yksr2CK56x1cePcmIohqUCmaj&q=${category}&limit=10`;
-
-    const resp = await fetch (url);
-    const {data} = await resp.json();
-
-    const gifs = data.map( img => ({
-        id: img.id,
-        title: img.title,
-        url: img.images.downsized_medium.url
-    }));
-
-    console.log(gifs);
-    return(gifs);
-
-}
+import { getGifs } from "../helpers/getGifs";
 
 export const GifGrid = ({category}) => {
 
@@ -23,7 +7,6 @@ export const GifGrid = ({category}) => {
   return (
     <>
         <h3>{category}</h3>
-        <p>Hola mundo</p>
     </>
   )
 }
