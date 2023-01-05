@@ -12,6 +12,8 @@ export const GifExpertApp = () => {
     // console.log('Valorant');
     // setCategories([ ...categories, newCategory]);
 
+    if(categories.includes(newCategory)) return;
+
     setCategories([ newCategory, ...categories]);
     
   }
