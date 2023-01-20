@@ -27,8 +27,4 @@ describe('pruebas en useFetchGifs', () => {
 
     });
 
-      
-
-
-
  });
