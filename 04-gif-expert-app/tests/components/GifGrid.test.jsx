@@ -49,4 +49,4 @@ describe('pruebas en <GifGrid/>', () => {
         expect(screen.getAllByRole('img').length).toBe(2);
 
       });
- })
+ });
