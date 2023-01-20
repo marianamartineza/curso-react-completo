@@ -35,4 +35,29 @@ describe('prueba de <GifExpertApp/>', () => {
 
       });
 
+      
+      test('no debe de mostrar el nombre de la categoria si esta repetida y debe limpiar el text box', () => { 
+        render(<GifExpertApp/>);
+
+        const category = 'Midoriya';
+        const input = screen.getByRole('textbox');
+        const form = screen.getByRole('form');
+
+        fireEvent.input(input, {target: {value: category}});
+        fireEvent.submit(form);
+
+        // screen.debug();
+
+        fireEvent.input(input, {target: {value: category}});
+        fireEvent.submit(form);
+
+        // screen.debug();
+
+        expect(screen.getAllByText(category).length).toBe(1);
+        // console.log(screen.getAllByText(category).length);
+
+        expect(input.value).toBe('');
+
+      });
+
  });
