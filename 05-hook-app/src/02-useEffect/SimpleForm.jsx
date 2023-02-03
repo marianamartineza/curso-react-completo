@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 
-
 export const SimpleForm = () => {
 
     const [formState, setFormState] = useState({
@@ -19,9 +18,18 @@ export const SimpleForm = () => {
         });
     }
 
-    useEffect( () => {
+    // Las dependencias de useEffect son las que permiten controlar cuando se va adispara el evento deseado
+    useEffect(() => {
         console.log('useEffect called!');
-    });
+    },[]);
+
+    useEffect(() => {
+        console.log('formState changed!');
+    },[formState]);
+
+    useEffect( () => {
+        console.log('email changed!');
+    },[email]);
 
     return (
         <>
