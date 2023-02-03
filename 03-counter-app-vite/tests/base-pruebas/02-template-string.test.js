@@ -1,14 +1,10 @@
 import { getSaludo } from '../../src/base-pruebas/02-template-string';
 
-describe('Pruebas en 02-template-string', () => { 
+describe('Pruebas en 02-template-string', () => {
+  test('getSaludo debe de retornar "Hola Mariana"', () => {
+    const name = 'Mariana';
+    const message = getSaludo(name);
 
-    test('getSaludo debe de retornar "Hola Mariana"', () => { 
-        
-        const name = 'Mariana';
-        const message = getSaludo( name );
-
-        expect(message).toBe(`Hola ${name}`);
-
-    });
-
+    expect(message).toBe(`Hola ${name}`);
+  });
 });

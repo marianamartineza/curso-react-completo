@@ -10,16 +10,14 @@ import './styles.css';
 //     </React.StrictMode>
 // );
 
-import {FirstApp} from './FirstApp';
-import {CounterApp} from './CounterApp'
+import { FirstApp } from './FirstApp';
+import { CounterApp } from './CounterApp';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
-        {/* properties - propiedades  */}
-        {/* <FirstApp subTitle={1234} /> */}
-        <CounterApp value={10} />
-         {/* <FirstApp title="Hola, soy vegeta" subTitle={12}/>  */}
-    </React.StrictMode>
-)
-
-
+  <React.StrictMode>
+    {/* properties - propiedades  */}
+    {/* <FirstApp subTitle={1234} /> */}
+    <CounterApp value={10} />
+    {/* <FirstApp title="Hola, soy vegeta" subTitle={12}/>  */}
+  </React.StrictMode>
+);

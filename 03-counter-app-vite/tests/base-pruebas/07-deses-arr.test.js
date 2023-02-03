@@ -1,19 +1,15 @@
-import { retornaArreglo } from "../../src/base-pruebas/07-deses-arr";
+import { retornaArreglo } from '../../src/base-pruebas/07-deses-arr';
 
-describe('Pruebas en 07-deses-arr', () => { 
-    
-    test('deberia regresar un string y un num', () => { 
-        
-        const [letters,numbers] = retornaArreglo();
-        
-        expect(letters).toBe('ABC');
-        expect(numbers).toBe(123);
+describe('Pruebas en 07-deses-arr', () => {
+  test('deberia regresar un string y un num', () => {
+    const [letters, numbers] = retornaArreglo();
 
-        expect(typeof letters).toBe('string');
-        expect(typeof numbers).toBe('number')
+    expect(letters).toBe('ABC');
+    expect(numbers).toBe(123);
 
-        expect(letters).toEqual(expect.any(String));
+    expect(typeof letters).toBe('string');
+    expect(typeof numbers).toBe('number');
 
-     });
-
- });
+    expect(letters).toEqual(expect.any(String));
+  });
+});
