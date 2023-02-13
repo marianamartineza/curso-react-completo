@@ -1,6 +1,6 @@
-import {memo} from 'react';
+import React from 'react';
 
-export const ShowIncrement = memo( ({increment}) => {
+export const ShowIncrement = React.memo( ({increment}) => {
   return (
     <button
         className="btn btn-primary"
