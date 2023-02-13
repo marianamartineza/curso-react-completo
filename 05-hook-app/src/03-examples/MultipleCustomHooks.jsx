@@ -1,5 +1,6 @@
-import { useCounter } from "../hooks/useCounter";
-import { useFetch } from "../hooks/useFetch";
+import { useCounter, useFetch } from "../hooks";
+import { LoadingQuote, Quote} from "./";
+
 
 
 export const MultipleCustomHooks = () => {
@@ -10,15 +11,7 @@ export const MultipleCustomHooks = () => {
 
     const {author, quote} = !!data && data[0];
 
-    console.log({data,isLoading,hasError});
-
-    // if(isLoading){
-    //   return(
-    //     <h1>Cargando...</h1>
-    //   )
-    // }
-
-    // //no pueden colocarse hooks 
+    // console.log({data,isLoading,hasError});
 
   return (
     <>
@@ -26,17 +19,8 @@ export const MultipleCustomHooks = () => {
         <hr />
 
         {
-          isLoading ? (
-            <div className="alert alert-info text-center">
-              Loading...
-            </div>
-          ): 
-          (
-            <blockquote className="blockquote text-end"> 
-            <p className="mb-1">{quote}</p>
-            <footer className="blockquote-footer mb-1">{author}</footer>
-            </blockquote>
-          )
+          isLoading ? <LoadingQuote/>
+          : <Quote author={author} quote={quote}/>
         }
 
         <button 
