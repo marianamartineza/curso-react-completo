@@ -1,9 +1,13 @@
+import { useCounter } from "../hooks/useCounter";
 import { useFetch } from "../hooks/useFetch";
 
 
 export const MultipleCustomHooks = () => {
 
-    const {data,isLoading,hasError} = useFetch('https://api.breakingbadquotes.xyz/v1/quotes/1');
+    const {counter,increment} = useCounter(1);
+
+    const {data,isLoading,hasError} = useFetch(`https://api.breakingbadquotes.xyz/v1/quotes/${counter}`);
+
     const {author, quote} = !!data && data[0];
 
     console.log({data,isLoading,hasError});
@@ -35,7 +39,12 @@ export const MultipleCustomHooks = () => {
           )
         }
 
-        <button className="btn btn-primary">Next Quote</button>
+        <button 
+          className="btn btn-primary"
+          disabled={isLoading}
+          onClick={() => increment()}>
+            Next Quote
+        </button>
 
     </>
   )
