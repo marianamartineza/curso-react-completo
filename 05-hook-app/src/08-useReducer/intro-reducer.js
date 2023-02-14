@@ -1,4 +1,4 @@
-
+//estado inicial
 const initialState = [
     {
         id: 1,
@@ -14,8 +14,6 @@ const todoReducer = ( state = initialState, action = {}) => {
         //no se puede mutar, la forma correcta es usar el spread para heredar sus propiedades ...
         return [...state, action.payload];
     }
-
-
 
     return state;
 }
