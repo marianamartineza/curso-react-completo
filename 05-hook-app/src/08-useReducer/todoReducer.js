@@ -2,9 +2,8 @@
 export const todoReducer = (initialState, action) => {
 
     switch (action.type) {
-        case 'ABC':
-            //pendiente de crear 
-            throw new error('action.type = ABC no esta implementada');
+        case '[TODO] Add Todo':
+            return [ ...initialState, action.payload]
     
         default:
             return initialState;
