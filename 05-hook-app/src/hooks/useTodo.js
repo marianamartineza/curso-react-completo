@@ -49,13 +49,13 @@ export const useTodo = () => {
         
     }
 
-    
-
     return {
         todos,
         handleNewTodo,
         handleDeleteTodo,
-        handleToggleTodo
+        handleToggleTodo,
+        todosCount: todos.length,
+        pendingTodosCount: todos.filter(todo => !todo.done).length
     }
 
 }
