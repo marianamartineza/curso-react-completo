@@ -52,6 +52,16 @@ export const TodoApp = () => {
         });
     }
 
+    //al hacer click marcar como completada el todo
+    const handleToggleTodo = (id) => {
+        // console.log({id})
+        dispatch({
+            type: '[TODO] Toggle Todo',
+            payload: id
+        })
+        
+    }
+
     //las llamadas  a las funciones que controlan el reducer se hacen mediante props
     return (
         <> 
@@ -63,6 +73,7 @@ export const TodoApp = () => {
                     <TodoList 
                         todos={todos} 
                         onDeleteTodo = {handleDeleteTodo}
+                        onToggleTodo = {handleToggleTodo}
                     />
                 </div>
 

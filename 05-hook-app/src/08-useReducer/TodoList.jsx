@@ -1,7 +1,7 @@
 import { TodoItem } from "./TodoItem"
 
 // desestructurar de la properties la accion onDeleteTodo
-export const TodoList = ({todos = [], onDeleteTodo}) => {
+export const TodoList = ({todos = [], onDeleteTodo, onToggleTodo}) => {
   return (
     <>
         <ul className="list-group">
@@ -12,6 +12,7 @@ export const TodoList = ({todos = [], onDeleteTodo}) => {
                       key={todo.id} 
                       todo={todo} 
                       onDeleteTodo = {id => onDeleteTodo(id)}
+                      onToggleTodo = {onToggleTodo}
                     />
                 ))
             }       

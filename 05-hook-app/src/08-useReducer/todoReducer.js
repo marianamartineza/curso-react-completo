@@ -10,6 +10,20 @@ export const todoReducer = (initialState, action) => {
         case '[TODO] Remove Todo':
             //el filter controla los datos que contiene y devuelven un arreglo diferente no lo muta como el push
             return initialState.filter( todo => todo.id != action.payload)
+        
+        case '[TODO] Toggle Todo':
+            //map regresa un nuevo arreglo
+            return initialState.map( todo => {
+                
+                if( todo.id === action.payload) {
+                    return {
+                        ...todo,
+                        done: !todo.done
+                    }
+                }
+
+                return todo;
+            });
             
         default:
             return initialState;
